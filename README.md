@@ -1,2 +1,2 @@
 # Simple_text_encryptor
-The letter "z" does not work :((
+The simplest text encoder / decoder, works only with English text.
