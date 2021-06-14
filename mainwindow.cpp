@@ -18,9 +18,9 @@ MainWindow::~MainWindow()
 //Метод шифрования
 std::string encrypt(std::string input) {
     std::vector<char> word(input.begin(), input.end());
-    std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
-    for (int i = 0; i < (int)input.length(); i++) {
-        for (int j = 0; j < (int)alphabet.length(); j++) {
+    std::string alphabet = "zabcdefghijklmnopqrstuvwxyz";
+    for (int i = 1; i < (int)input.length(); i++) {
+        for (int j = 1; j < (int)alphabet.length(); j++) {
             if (word[i] == alphabet[j]) {
                 word[i] = alphabet[(j + 1) % 26];
                 break;
@@ -34,9 +34,9 @@ std::string encrypt(std::string input) {
 //Метод дешифрования
 std::string decrypt(std::string input) {
     std::vector<char> word(input.begin(), input.end());
-    std::string alphabet = "abcdefghijklmnopqrstuvwxyz";
-    for (int i = 0; i < (int)input.length(); i++) {
-        for (int j = 0; j < (int)alphabet.length(); j++) {
+    std::string alphabet = "zabcdefghijklmnopqrstuvwxyz";
+    for (int i = 1; i < (int)input.length(); i++) {
+        for (int j = 1; j < (int)alphabet.length(); j++) {
             if (word[i] == alphabet[j]) {
                 word[i] = alphabet[(j - 1) % 26];
                 break;
